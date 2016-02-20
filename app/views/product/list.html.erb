@@ -1,0 +1,9 @@
+<div class="product_thumb">
+<% @products.each do |product| %>
+
+    <%= image_tag "products/#{product.img_file}.jpg" %>
+    <p><%= product.item %></p>
+    <p><%= product.price %></p>
+    <%= link_to "More info", "/product/#{product.pid}", class:"btn btn-secondary-outline" %>
+<% end %>
+</div>

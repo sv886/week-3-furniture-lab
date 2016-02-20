@@ -1,16 +1,12 @@
-<% @product.find do |product| %>
-<h1><%= image_tag "products/#{product.img_file}.jpg" %></h1>
+<%= image_tag "products/#{@product.img_file}.jpg" %>
 <h2>
-  <p class="item"><%= product.item %></p>
+  <p class="item"><%= @product.item %></p>
   <p class="price">Price</p>
-  <p><%= product.price %></p>
+  <p>$<%= @product.discount_price %></p>
   <p class="description">Description</p>
-  <p><%= product.description %></p>
-
-  <p><%= product.dimension_w %></p>
-  <p><%= product.dimension_l %></p>
-  <p><%= product.dimension_h %></p>
-
+  <p><%= @product.description %></p>
+  <p>Width: <%= @product.dimension_w %></p>
+  <p>Length: <%= @product.dimension_l %></p>
+  <p>Height: <%= @product.dimension_h %></p>
 
 </h2>
-<% end %>

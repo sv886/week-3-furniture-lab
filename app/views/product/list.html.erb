@@ -1,9 +1,15 @@
-<div class="product_thumb">
-<% @non_zero_inv.each do |product| %>
 
-    <%= image_tag "products/#{product.img_file}.jpg" %>
-    <p><%= product.item %></p>
-    <p><%= product.discount_price %></p>
-    <%= link_to "More info", "/product/#{product.pid}", class:"btn btn-secondary-outline" %>
+<div class="wrapper">
+
+
+<% @non_zero_inv.each do |product| %>
+<div class="product_thumb">
+    <div class="img_thumb"><%= image_tag "products/#{product.img_file}.jpg", :size => "300x200" %></div>
+      <p><%= product.item %></p>
+      <p><%= product.discount_price %></p>
+      <%= link_to "More info", "/product/#{product.pid}", class:"btn btn-secondary-outline" %>
+</div>
 <% end %>
+
+
 </div>

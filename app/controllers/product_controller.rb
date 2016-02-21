@@ -3,12 +3,12 @@ require 'csv'
 class ProductController < ApplicationController
 
   def list
-    @products = fetch_products
+    @non_zero_inv = non_zero_inv
   end
 
   def view
-    @products = fetch_products
-    @product = @products.find { |x| x.pid  == params[:pid]}
+    @non_zero_inv = non_zero_inv
+    @product = @non_zero_inv.find { |x| x.pid  == params[:pid]}
   end
 
   def fetch_products
@@ -31,15 +31,9 @@ class ProductController < ApplicationController
   @products
   end
 
-  # def non_zero_inv
-  #   @products = fetch_products
-  #   @products.each do |product|
-  #     if product.quantity > 0
-  #       @non_zero_inv << product
-  #     end
-  #   @non_zero_inv
-  # end
-
-
+  def non_zero_inv
+    @products = fetch_products
+    @non_zero_inv = @products.select { |product| product.quantity.to_i > 0 }
+  end
 
 end

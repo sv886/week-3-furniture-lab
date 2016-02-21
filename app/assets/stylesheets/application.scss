@@ -1,0 +1,24 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'welcome';
+@import 'product';
+
+$primary: #2B3D51;
+$accent: #FEFAFE;
+body {
+  display: flex;
+  flex-direction: column;
+  background: $accent;
+}
+header {
+  display: flex;
+  width: 100%;
+  background: $primary;
+  padding: 20px;
+  justify-content: center;
+  p {
+    color: $accent;
+    font-size: 30px;
+
+  }
+}

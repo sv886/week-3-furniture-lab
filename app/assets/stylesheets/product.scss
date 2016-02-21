@@ -1,0 +1,24 @@
+$primary: #0A0A0D;
+$accent: #16A085;
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 30px;
+    .product_thumb {
+      display: flex 2.5;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 2px solid #95A5A6;
+      margin: 20px 20px;
+      padding: 10px;
+            .img_thumb {
+              width: 100%;
+
+        }
+    }
+}

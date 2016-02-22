@@ -5,9 +5,9 @@
 <% @non_zero_inv.each do |product| %>
 <div class="product_thumb">
     <div class="img_thumb"><%= image_tag "products/#{product.img_file}.jpg", :size => "300x200" %></div>
-      <p><%= product.item %></p>
+      <div class="item"><%= product.item %></div>
       <p><%= product.discount_price %></p>
-      <%= link_to "More info", "/product/#{product.pid}", class:"btn btn-secondary-outline" %>
+      <%= link_to "More info", "/product/#{product.pid}", class:"btn btn-secondary btn-sm active" %>
 </div>
 <% end %>
 

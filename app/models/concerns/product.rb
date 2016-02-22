@@ -4,9 +4,9 @@ class Product
 
   def discount_price
       if self.condition == "good"
-        self.price = "AFTER 10% DISCOUNT: #{formatted_number(self.price.to_f * 0.9)}"
+        self.price = "#{formatted_number(self.price.to_f * 0.9)} after 10% discount"
       elsif self.condition == "average"
-        self.price = "AFTER 20% DISCOUNT: #{formatted_number(self.price.to_f * 0.8)}"
+        self.price = "#{formatted_number(self.price.to_f * 0.8)} after 20% discount"
       else
         self.price = formatted_number(self.price.to_f * 1.0)
       end

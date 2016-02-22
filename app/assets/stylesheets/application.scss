@@ -14,11 +14,22 @@ header {
   display: flex;
   width: 100%;
   background: $primary;
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
   p {
     color: $accent;
-    font-size: 30px;
+    font-size: 45px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+      a {
+        color: inherit;
+      }
 
   }
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+
 }
